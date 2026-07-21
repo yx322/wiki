@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "ae99fbfc0d177d13",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef6c26e4b1e1106e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2af3c7b851816658",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/ngram-analyzer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ngram-analyzer"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6340cf8154a9f4c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "673c84e5f7355d45",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1afe72390481aed5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6ab5d20b2030b2c0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "49c971839a6da169",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b5ab87f67f30c2ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "89d28c4cdcb963e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "befe884b5f7c5bb3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "entities/risingwave.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "risingwave 的反向链接列表"
+            }
+          },
+          {
+            "id": "463a402ff218d5a5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "entities/risingwave.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "risingwave 的出链列表"
+            }
+          },
+          {
+            "id": "5e4ad90c53d9bc4c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "6e2985fc5ceac221",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "1ee304bfe9e1a6f3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "entities/risingwave.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "risingwave 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "2af3c7b851816658",
+  "lastOpenFiles": [
+    "crystallization.base",
+    "未命名 1.base",
+    "未命名.canvas",
+    "SCHEMA.md",
+    "log.md",
+    "index.md",
+    "dify-critique.md",
+    "raw/articles/DeltaLake_DuckDB_Polars_Guide.md",
+    "entities/surrealdb.md",
+    "entities/surrealkv.md",
+    "entities/slatedb.md",
+    "entities/skillforge.md",
+    "concepts/agent-memory.md",
+    "entities/delta-lake.md",
+    "raw/articles/data-pipeline-workflow.md",
+    "concepts/data-pipeline-workflow.md",
+    "raw/articles/llm-overthinking-critique.md",
+    "raw/articles/llm-hidden-behavior-patterns.md",
+    "entities/dashscope.md",
+    "2026-08-12.md",
+    "concepts/bm25.md",
+    "entities/risingwave.md",
+    "raw/articles/llm-fundamentals.md",
+    "concepts/ngram-analyzer.md",
+    "raw/articles/SurrealDB索引定义解析.md",
+    "concepts/kv-cache.md",
+    "concepts/iceberg-cow-problem.md",
+    "concepts/embedding-migration.md"
+  ]
+}
