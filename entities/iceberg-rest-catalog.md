@@ -70,3 +70,4 @@ OSS Tables 没有完全实现标准 Iceberg REST Catalog 协议：
 - [[iceberg]] — 表格式规范
 - [[pyiceberg]] — Python 客户端
 - [[polars-iceberg-oss-tables]] — OSS Tables 兼容性问题
+- [[lakekeeper]] — 自建 REST Catalog 实现（标准协议方案）

@@ -103,3 +103,5 @@ WITH (
 - [[iceberg]] — 落湖格式
 - [[lakehouse]] — 湖仓一体架构
 - [[cdc-vs-api-sync]] — CDC 与接口同步对比
+- [[lakekeeper]] — 自建 REST Catalog（本链路元数据层）
+- [[sync-on-query-vs-cdc]] — asw vs search-todo 架构对比

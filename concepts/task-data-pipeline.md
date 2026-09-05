@@ -85,5 +85,7 @@ MySQL (oa_task)  →  RisingWave (CDC)  →  物化视图  →  Iceberg Sink  �
 - [[iceberg]] — 表格式
 - [[cdc-vs-api-sync]] — CDC vs API 同步
 - [[skillforge]] — Agent 运行时
+- [[lakekeeper]] — 自建 REST Catalog（元数据层）
+- [[sync-on-query-vs-cdc]] — asw vs search-todo 架构对比（本链路为 search-todo 侧）
 
 ^[raw/articles/task-data-pipeline.md]

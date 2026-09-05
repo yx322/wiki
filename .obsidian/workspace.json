@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/ngram-analyzer.md",
+                "file": "raw/articles/agent-memory-architecture-summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ngram-analyzer"
+              "title": "agent-memory-architecture-summary"
             }
           }
         ]
@@ -187,6 +187,12 @@
   },
   "active": "2af3c7b851816658",
   "lastOpenFiles": [
+    "entities/lakekeeper.md",
+    "comparisons/sync-on-query-vs-cdc.md",
+    "raw/articles/cdc-risingwave-iceberg-lakekeeper-dialog.md",
+    "raw/articles/agent-memory-architecture.md",
+    "raw/articles/湖仓一体化（纯接口模式）性能重构落地方案.md",
+    "concepts/ngram-analyzer.md",
     "crystallization.base",
     "未命名 1.base",
     "未命名.canvas",
@@ -209,11 +215,6 @@
     "2026-08-12.md",
     "concepts/bm25.md",
     "entities/risingwave.md",
-    "raw/articles/llm-fundamentals.md",
-    "concepts/ngram-analyzer.md",
-    "raw/articles/SurrealDB索引定义解析.md",
-    "concepts/kv-cache.md",
-    "concepts/iceberg-cow-problem.md",
-    "concepts/embedding-migration.md"
+    "raw/articles/llm-fundamentals.md"
   ]
 }

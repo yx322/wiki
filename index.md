@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-08-20 | Total pages: 76
+> Last updated: 2026-09-03 | Total pages: 78
 
 ## Entities
 
@@ -15,6 +15,7 @@
 - [[polars]] — Rust 底层高性能 DataFrame 库，多核并行 + 懒惰模式
 - [[pyiceberg]] — Iceberg 纯 Python 客户端，轻量级执行读写
 - [[risingwave]] — 流数据库，常驻内存物化视图 + Iceberg Sink 落湖
+- [[lakekeeper]] — 自建 Iceberg REST Catalog，标准协议，元数据存 PG
 - [[skillforge]] — AI Agent 技能运行时环境，可插拔技能 + 记忆持久化
 - [[surrealdb]] — 多模型数据库，支持向量搜索、全文检索、图数据库
 - [[fjall]] — 纯 Rust 嵌入式 LSM-Tree KV 引擎，本地 NVMe 极致性能
@@ -89,5 +90,6 @@
 
 - [[ollama-vs-dashscope]] — 本地 Ollama vs 云端 DashScope 嵌入方案对比
 - [[embedded-kv-vs-redis]] — 嵌入式 KV vs Redis：TCO 1/8、延迟 1/16、运维 1/8
+- [[sync-on-query-vs-cdc]] — asw（Sync-on-Query 客户端写入 + OSS Tables）vs search-todo（CDC 流式 + Lakekeeper）：复杂度藏在代码里 vs 摆在 docker-compose 里
 
 ## Queries
