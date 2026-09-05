@@ -140,3 +140,12 @@
 - Created: concepts/engineering-mindset.md (工程思维与工程素养)
 - Skipped: 解释 Skillforge 文件.md (内容已被 entities/skillforge.md 覆盖)
 - Total new pages: 2
+
+## [2026-09-03] ingest | MySQL CDC → RisingWave → Iceberg (Lakekeeper + OSS) 对话记录（1篇源文档）
+- Raw: cdc-risingwave-iceberg-lakekeeper-dialog.md (D:\md\cdc-risingwave-iceberg-lakekeeper-对话记录.md)
+- Created: entities/lakekeeper.md (自建 Iceberg REST Catalog，标准协议，元数据存 PG，server 注册进 Warehouse 是最常见坑)
+- Created: comparisons/sync-on-query-vs-cdc.md (asw Sync-on-Query 客户端写入 vs search-todo CDC 流式：复杂度藏在代码里 vs 摆在 docker-compose 里)
+- Updated: entities/iceberg-rest-catalog.md (+参见 lakekeeper)
+- Updated: entities/risingwave.md (+参见 lakekeeper / sync-on-query-vs-cdc)
+- Updated: concepts/task-data-pipeline.md (+参见 lakekeeper / sync-on-query-vs-cdc)
+- Total pages: 78
