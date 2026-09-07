@@ -90,6 +90,9 @@ ACL 过滤不是解——话语权越大的人拥有的技能越多，过滤后�
 task 节点持有对 KG 节点的引用，高 churn 的实例态不灌进写时重的图。
 
 ## 参见
+
+- [[skill-vs-framework]] — Skill 模式 vs 框架路线（本页场景的架构级对比）
+- [[deepagents]] — 中间地带实现（薄封装 LangGraph）
 - [[skillforge]] — 技能运行时框架
 - [[task-memory-ticket]] — 任务记忆
 - [[graph-memory]] — 图谱化记忆

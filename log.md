@@ -149,3 +149,11 @@
 - Updated: entities/risingwave.md (+参见 lakekeeper / sync-on-query-vs-cdc)
 - Updated: concepts/task-data-pipeline.md (+参见 lakekeeper / sync-on-query-vs-cdc)
 - Total pages: 78
+
+## [2026-09-07] ingest | DeepAgent 基于 LangChain 新功能对话记录（1篇源文档，10轮Q&A）
+- Raw: deepagent-langchain-dialog.md (D:\md\langgraph-Deepagent-skill-compare\DeepAgent基于LangChain新功能-Zai对话记录.md)
+- Created: entities/deepagents.md (LangGraph 薄封装，todo/子代理/虚拟文件系统，编排框架≠推理引擎)
+- Created: comparisons/skill-vs-framework.md (编排智能放模型上下文 vs 放框架代码，光谱右移，skillforge 定位论证)
+- Created: concepts/agent-cache-memory-optimization.md (语义缓存/工具缓存/推理链缓存/分层记忆四级优化，压缩率~80%)
+- Updated: concepts/emergent-skill.md (+参见 skill-vs-framework / deepagents)
+- Total pages: 81

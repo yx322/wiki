@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-03 | Total pages: 78
+> Last updated: 2026-09-07 | Total pages: 81
 
 ## Entities
 
@@ -17,6 +17,7 @@
 - [[risingwave]] — 流数据库，常驻内存物化视图 + Iceberg Sink 落湖
 - [[lakekeeper]] — 自建 Iceberg REST Catalog，标准协议，元数据存 PG
 - [[skillforge]] — AI Agent 技能运行时环境，可插拔技能 + 记忆持久化
+- [[deepagents]] — LangChain 深度任务 Agent 库，LangGraph 薄封装 + todo/子代理/虚拟文件系统
 - [[surrealdb]] — 多模型数据库，支持向量搜索、全文检索、图数据库
 - [[fjall]] — 纯 Rust 嵌入式 LSM-Tree KV 引擎，本地 NVMe 极致性能
 - [[slatedb]] — 纯 Rust 云原生 LSM-Tree KV 引擎，真理源在 S3
@@ -26,6 +27,7 @@
 ## Concepts
 
 - [[agent-compound-interest]] — Agent 复利：持久化（Memory/Skills/Cron）让每次交互产生跨会话累积
+- [[agent-cache-memory-optimization]] — Agent 四级优化：语义缓存/工具缓存/推理链缓存/分层记忆，压缩率 ~80%
 - [[agent-memory]] — Agent 记忆两层架构：集成层（框架相关）+ 处理层（框架无关）
 - [[agent-usage-patterns]] — Agent 使用模式：主动驾驶、负面指令、看 diff、纠正写入持久化
 - [[automation-skill-workflow]] — 自动化 Skill 工作流：抓包录制→AI 编译→双模降级执行
@@ -91,5 +93,6 @@
 - [[ollama-vs-dashscope]] — 本地 Ollama vs 云端 DashScope 嵌入方案对比
 - [[embedded-kv-vs-redis]] — 嵌入式 KV vs Redis：TCO 1/8、延迟 1/16、运维 1/8
 - [[sync-on-query-vs-cdc]] — asw（Sync-on-Query 客户端写入 + OSS Tables）vs search-todo（CDC 流式 + Lakekeeper）：复杂度藏在代码里 vs 摆在 docker-compose 里
+- [[skill-vs-framework]] — Skill 模式 vs 框架路线：编排智能放模型上下文 vs 放框架代码，光谱正在右移
 
 ## Queries
