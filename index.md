@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-07 | Total pages: 81
+> Last updated: 2026-09-07 | Total pages: 82
 
 ## Entities
 
@@ -87,12 +87,13 @@
 - [[emergent-skill]] — 涌现式 SKILL：技能从使用中自己长出来，图可达性替代 ACL，规模越大越划算
 - [[prefix-checkpoint]] — Prefix Checkpoint：不可变 checkpoint 实现上下文压缩，对 KV cache 友好
 - [[skill-direct-invocation]] — Skill 直接调用与推送：绕过 LLM 执行确定性操作，脚本主动推送前端
+- [[skill-form-param-collection]] — Skill 表单化参数收集：缺参推 json-render 表单，用户填写带参回调，LLM 零参与
 
 ## Comparisons
 
 - [[ollama-vs-dashscope]] — 本地 Ollama vs 云端 DashScope 嵌入方案对比
 - [[embedded-kv-vs-redis]] — 嵌入式 KV vs Redis：TCO 1/8、延迟 1/16、运维 1/8
-- [[sync-on-query-vs-cdc]] — asw（Sync-on-Query 客户端写入 + OSS Tables）vs search-todo（CDC 流式 + Lakekeeper）：复杂度藏在代码里 vs 摆在 docker-compose 里
 - [[skill-vs-framework]] — Skill 模式 vs 框架路线：编排智能放模型上下文 vs 放框架代码，光谱正在右移
+- [[sync-on-query-vs-cdc]] — asw（Sync-on-Query 客户端写入 + OSS Tables）vs search-todo（CDC 流式 + Lakekeeper）：复杂度藏在代码里 vs 摆在 docker-compose 里
 
 ## Queries
