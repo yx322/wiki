@@ -157,3 +157,9 @@
 - Created: concepts/agent-cache-memory-optimization.md (语义缓存/工具缓存/推理链缓存/分层记忆四级优化，压缩率~80%)
 - Updated: concepts/emergent-skill.md (+参见 skill-vs-framework / deepagents)
 - Total pages: 81
+
+## [2026-09-07] ingest | Skill 表单化参数收集方案对话记录（1篇源文档）
+- Raw: skillforge-form-param-collection-dialog.md (D:\md\skillforge-analysis\09-表单化参数收集方案-json-render对话记录.md)
+- Created: concepts/skill-form-param-collection.md (缺参推 json-render 表单 + hidden 带参回调，LLM 零参与，无状态设计)
+- Updated: index.md (Total pages: 82)
+- 状态：方案确认完毕待实施（push_form + typer 内省生成 schema + calls.py 兜底校验）
