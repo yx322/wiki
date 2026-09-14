@@ -169,3 +169,10 @@
 - Created: concepts/activation-loss-functions.md (激活函数引入非线性 Sigmoid→SwiGLU 演进；损失函数 MSE/MAE/Huber/BCE/CE/Focal；LLM 训练=词表上交叉熵；两者关系与训练闭环)
 - Updated: SCHEMA.md (taxonomy 新增 deep-learning 标签)
 - Updated: index.md (Concepts +1, Total pages: 83)
+
+## [2026-09-14] update | skill-direct-invocation（推送/回调机制与代码同步）
+- Updated: concepts/skill-direct-invocation.md（按 skillforge yx 分支 1f5e530 代码事实重写）
+- 新增：身份链路（token→User API→user_id）、环境变量注入表（CONTEXT_USER_ID/SKILLFORGE_*_ENDPOINT）
+- 修正：推送映射从"token 映射"改为 user_id → WS _verified 表；PushManager 404/502 语义
+- 新增：回调闭环（push_back_call + action 子命令，action 作者手写、typer 命名规则 get_command_name）
+- Updated: index.md（skillforge 行补充推送/回调闭环描述）

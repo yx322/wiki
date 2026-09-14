@@ -16,7 +16,7 @@
 - [[pyiceberg]] — Iceberg 纯 Python 客户端，轻量级执行读写
 - [[risingwave]] — 流数据库，常驻内存物化视图 + Iceberg Sink 落湖
 - [[lakekeeper]] — 自建 Iceberg REST Catalog，标准协议，元数据存 PG
-- [[skillforge]] — AI Agent 技能运行时环境，可插拔技能 + 记忆持久化
+- [[skillforge]] — AI Agent 技能运行时环境，可插拔技能 + 记忆持久化 + 推送/回调闭环
 - [[deepagents]] — LangChain 深度任务 Agent 库，LangGraph 薄封装 + todo/子代理/虚拟文件系统
 - [[surrealdb]] — 多模型数据库，支持向量搜索、全文检索、图数据库
 - [[fjall]] — 纯 Rust 嵌入式 LSM-Tree KV 引擎，本地 NVMe 极致性能
