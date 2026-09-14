@@ -163,3 +163,9 @@
 - Created: concepts/skill-form-param-collection.md (缺参推 json-render 表单 + hidden 带参回调，LLM 零参与，无状态设计)
 - Updated: index.md (Total pages: 82)
 - 状态：方案确认完毕待实施（push_form + typer 内省生成 schema + calls.py 兜底校验）
+
+## [2026-09-14] create | 激活函数与损失函数（对话整理）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/activation-loss-functions.md (激活函数引入非线性 Sigmoid→SwiGLU 演进；损失函数 MSE/MAE/Huber/BCE/CE/Focal；LLM 训练=词表上交叉熵；两者关系与训练闭环)
+- Updated: SCHEMA.md (taxonomy 新增 deep-learning 标签)
+- Updated: index.md (Concepts +1, Total pages: 83)

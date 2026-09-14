@@ -61,6 +61,7 @@ sha256: <hex digest of body content>
 
 ### LLM 与 Agent
 - llm — 大语言模型基础
+- deep-learning — 深度学习基础（激活函数、损失函数、训练）
 - agent — AI Agent 架构
 - cot — 思维链 / Chain of Thought
 - tool-calling — 工具调用
