@@ -1,7 +1,7 @@
 ---
 title: Skill 模式 vs 框架路线
 created: 2026-09-07
-updated: 2026-09-07
+updated: 2026-09-14
 type: comparison
 tags: [skill, langgraph, deepagents, agent, orchestration, philosophy]
 sources: [raw/articles/deepagent-langchain-dialog.md]
@@ -92,6 +92,12 @@ Agent 设计的两条路线，根本分歧只有一个问题：**Agent 的流程
 **退路**：skill 模式核心资产和执行骨架解耦——需要无人值守长任务时，最外面包一层薄 LangGraph（或自写带 checkpoint 的循环），skills 完全不用动。反向（深框架拆出 skill 化）成本高得多。
 
 常见混合形态：LangGraph 薄编排（循环 + checkpointer + HITL）+ Agent 节点内挂 Skills 目录（渐进披露）。
+
+## 对话补记：赌注与退路（原话）
+
+> 是的，两个方向。 框架路线相信"确定性要靠代码结构保证"，skill 路线相信"确定性要靠模型能力+高质量文档保证"。而且行业整体在从前者向后者迁移，模型每强一代，光谱就整体右移一格——你们现在选的位置，恰恰是赌模型会持续变强的那个位置。
+>
+> 这个赌注目前看是对的（Claude/GPT 每代都在提升自主规划能力），唯一要留的退路是：如果哪天需要跑无人值守的长任务，你们可以只在最外面包一层很薄的 LangGraph（或者干脆自己写个带 checkpoint 的循环），skills 完全不用动——这是 skill 模式一个隐藏的好处：核心资产和执行骨架是解耦的，往左挪的成本很低。反过来，从深框架里拆出来重做 skill 化，成本要高得多。
 
 ## 参见
 

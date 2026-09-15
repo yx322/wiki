@@ -176,3 +176,8 @@
 - 修正：推送映射从"token 映射"改为 user_id → WS _verified 表；PushManager 404/502 语义
 - 新增：回调闭环（push_back_call + action 子命令，action 作者手写、typer 命名规则 get_command_name）
 - Updated: index.md（skillforge 行补充推送/回调闭环描述）
+
+## [2026-09-14] update | skill-vs-framework（对话补记：赌注与退路）
+- Updated: comparisons/skill-vs-framework.md（新增"对话补记：赌注与退路（原话）"一节，原话引用保持不改动）
+- 内容：框架路线 vs skill 路线的确定性来源分歧；模型每强一代光谱右移一格；退路=外面包薄 LangGraph/自写 checkpoint 循环，核心资产与执行骨架解耦
+- Updated: frontmatter updated → 2026-09-14
