@@ -186,3 +186,8 @@
 - Source: 对话内容（无 raw 文件，sources 为空）
 - Created: concepts/why-open-table-format.md (对象存储只有文件没有表；Hive 时代五大痛点；表格式补回 ACID/隔离/演化/时间旅行/裁剪/增量；开放=无厂商锁定)
 - Updated: index.md (Concepts +1, Total pages: 84)
+
+## [2026-09-14] create | 开放表格式四大核心能力（对话整理）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/table-format-four-capabilities.md (事务=原子提交元数据指针；一致性=快照隔离MVCC+乐观并发；Schema=按字段ID对应免重写；版本控制=表的Git快照/回滚/增量；四能力闭环)
+- Updated: index.md (Concepts +1, Total pages: 85)
