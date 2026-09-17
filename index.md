@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-14 | Total pages: 83
+> Last updated: 2026-09-14 | Total pages: 84
 
 ## Entities
 
@@ -89,6 +89,7 @@
 - [[skill-direct-invocation]] — Skill 直接调用与推送：绕过 LLM 执行确定性操作，脚本主动推送前端
 - [[skill-form-param-collection]] — Skill 表单化参数收集：缺参推 json-render 表单，用户填写带参回调，LLM 零参与
 - [[activation-loss-functions]] — 激活函数引入非线性（Sigmoid→SwiGLU 演进），损失函数定义优化目标（MSE/CE/LLM 交叉熵）
+- [[why-open-table-format]] — 为什么需要开放表格式：对象存储只有文件没有表，元数据层补回事务/一致性/演化/版本语义
 
 ## Comparisons
 

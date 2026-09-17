@@ -181,3 +181,8 @@
 - Updated: comparisons/skill-vs-framework.md（新增"对话补记：赌注与退路（原话）"一节，原话引用保持不改动）
 - 内容：框架路线 vs skill 路线的确定性来源分歧；模型每强一代光谱右移一格；退路=外面包薄 LangGraph/自写 checkpoint 循环，核心资产与执行骨架解耦
 - Updated: frontmatter updated → 2026-09-14
+
+## [2026-09-14] create | 为什么需要开放表格式（对话整理）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/why-open-table-format.md (对象存储只有文件没有表；Hive 时代五大痛点；表格式补回 ACID/隔离/演化/时间旅行/裁剪/增量；开放=无厂商锁定)
+- Updated: index.md (Concepts +1, Total pages: 84)
