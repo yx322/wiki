@@ -2,7 +2,7 @@
 
 > 一次编译、持续维护的个人知识库。基于 [Karpathy 的 LLM Wiki 模式](https://karpathy.bearblog.dev/keep-a-wiki/) —— 不做检索式 RAG，而是把知识**主动整理成互相链接的 Markdown 页面**，让 LLM（和我自己）能读懂、能溯源、能持续生长。
 
-[![Pages](https://img.shields.io/badge/pages-83-blue)](index.md) [![Mode](https://img.shields.io/badge/mode-wiki%20%2B%20raw-orange)]() [![Lang](https://img.shields.io/badge/language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-red)]()
+[![Pages](https://img.shields.io/badge/pages-84-blue)](index.md) [![Mode](https://img.shields.io/badge/mode-wiki%20%2B%20raw-orange)]() [![Lang](https://img.shields.io/badge/language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-red)]()
 
 ---
 
@@ -80,7 +80,7 @@ wiki/
 | 语言设计 | [[modern-language-design]] · [[query-language-design]] · [[kdl-config-formats]] |
 | 设计模式 | [[design-patterns]] · [[engineering-mindset]] |
 
-> 完整索引见 **[index.md](index.md)**，当前共 **83 页**。
+> 完整索引见 **[index.md](index.md)**，当前共 **84 页**。
 
 ## Wiki vs RAG
 
@@ -116,4 +116,4 @@ git clone https://github.com/yx322/wiki.git
 
 ---
 
-*最后更新：2026-09-14 · 共 83 页 · 持续生长中* 🌱
+*最后更新：2026-09-14 · 共 84 页 · 持续生长中* 🌱
