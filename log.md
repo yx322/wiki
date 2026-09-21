@@ -191,3 +191,8 @@
 - Source: 对话内容（无 raw 文件，sources 为空）
 - Created: concepts/table-format-four-capabilities.md (事务=原子提交元数据指针；一致性=快照隔离MVCC+乐观并发；Schema=按字段ID对应免重写；版本控制=表的Git快照/回滚/增量；四能力闭环)
 - Updated: index.md (Concepts +1, Total pages: 85)
+
+## [2026-09-14] create | Embedding 与语义空间映射（对话整理）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/embedding-semantic-space.md (原始空间距离无意义；embedding=度量重排非单纯压缩；同模型才可比；先embedding再算距离是必然流程；与激活函数同属表征重排思想)
+- Updated: index.md (Concepts +1, Total pages: 86)

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-14 | Total pages: 85
+> Last updated: 2026-09-14 | Total pages: 86
 
 ## Entities
 
@@ -91,6 +91,7 @@
 - [[activation-loss-functions]] — 激活函数引入非线性（Sigmoid→SwiGLU 演进），损失函数定义优化目标（MSE/CE/LLM 交叉熵）
 - [[why-open-table-format]] — 为什么需要开放表格式：对象存储只有文件没有表，元数据层补回事务/一致性/演化/版本语义
 - [[table-format-four-capabilities]] — 开放表格式四大核心能力详解：事务/一致性/Schema 管理/版本控制，一个闭环
+- [[embedding-semantic-space]] — Embedding 把文本映射到距离有意义的语义空间；度量重排，同一模型才可比
 
 ## Comparisons
 
