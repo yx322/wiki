@@ -55,26 +55,32 @@ Parquet/CSV/JSON/Delta Lake/**Apache Iceberg**/Lance 读写；本地路径与 S3
 | 数据量大到要集群（不想用 PySpark/JVM） | **Daft** |
 | ML 数据准备（下载→预处理→喂 PyTorch） | **Daft** |
 
-## 与本项目 Polars 用法的关系（选型结论）
+## 与本项目 Polars 用法的关系（选型结论，2026-09-14 查证官方文档后修正）
 
 当前湖仓链路（[[task-data-pipeline]]）中 Polars 承担查湖客户端 + 轻量转换：纯表格数据、单机量级、单进程部署——Polars 全面占优，**不迁移**。
 
-| 维度 | 项目场景 | 谁占优 |
-|------|---------|--------|
-| 执行模式 | 单进程、数据单机放得下 | Polars（Ray 分布式用不上） |
-| 表格计算 | SQL 生成 + DuckDB + Polars 转换 | Polars |
-| 数据类型 | 纯结构化行列，无图像/张量 | 打平（多模态用不上） |
-| **Iceberg 写** | Polars `write_iceberg()` 已确认写不了 OSS Tables | **Daft 值得试的唯一理由** |
-| 生态/认知 | 现有代码全是 Polars + pyiceberg，坑已趟平 | Polars |
+**查证修正**：Daft 的 Iceberg 集成**基于 PyIceberg**（`load_catalog` 即 PyIceberg 函数，`write_iceberg` 接收 PyIceberg Table），并非独立 Rust-native 实现——因此 OSS Tables 协议不兼容问题（[[polars-iceberg-oss-tables]]）在 Daft 上原样存在，"绕开写入问题"的预期不成立。
 
-多模态优势对本项目价值接近零（OA 待办/工单/报价无图像管道）。唯一与痛点相关的是 **Iceberg 写入**：Daft 走自己的 Rust-native Iceberg 集成（非 PyIceberg 封装），若其 REST catalog 实现比 PyIceberg 更宽容，可绕开 OSS Tables 协议问题摆脱 Spark/手动 manifest 兜底——定位是"30 分钟试验项"，不是迁移对象（为单一写入点引入第二个 DataFrame 库违背单进程少依赖原则）。
+| Polars 现有角色（逐文件核实） | Daft 能替？ | 结论 |
+|---|---|---|
+| asw sync.py：ETL + 写 Delta Lake（`DeltaTable.merge` upsert） | ⚠️ Daft 读 Delta 但无 merge 等价，只 append/overwrite | 替了要重写 upsert，不值 |
+| query_oss.py：DuckDB 结果 `.pl()` → markdown 给 LLM | ✅ 随便替 | 无收益，纯换口味 |
+| search-todo sync.py：批量同步 ETL（cast/空值填充） | ✅ API 近同构 | 收益≈0 |
+| 湖读主链路 | ❌ 实际主力是 pyiceberg + DuckDB，Polars 只在两端 | Daft 无位置 |
 
-**再评估触发条件**：① 数据量大到单机放不下；② OSS Tables 写入需要摆脱现有 Spark/sink 兜底方案时。
+**关键查证**：Daft 的 Iceberg 读路径**尚不应用 V2 equality deletes**（官方 FAQ：on the roadmap）——而 RW iceberg upsert sink 恰以 merge-on-read 写入 equality delete 文件，直接读出重复行。项目手写的 [[iceberg-reader|IcebergDedupReader]]（按主键取最大 seq 去重）解决的正是这个问题，Daft 当前同样需要这层处理，故读侧也无优势。
+
+**Daft 的真实进场时机**（未来）：
+1. 其读路径支持 V2 equality deletes 后 → `daft.read_iceberg()` 可替代手写 dedup reader
+2. 数据量大到单机放不下 → Ray 分布式
+3. 出现图像/嵌入管道 → 多模态算子
+
+三条目前均不满足，定位保持"地图点位，不入栈"。
 
 ## 参见
 
 - [[polars]] — 单机高性能对照物
 - [[iceberg]] — Daft 原生支持的表格式
-- [[polars-iceberg-oss-tables]] — Polars 写 OSS Tables 的协议兼容性问题
+- [[polars-iceberg-oss-tables]] — Polars 写 OSS Tables 的协议兼容性问题（Daft 同受影响）
 - [[lakehouse]] — 湖仓一体架构
 - [[hnsw-index]] — Embedding 列的下游消费（向量检索）

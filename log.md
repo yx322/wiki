@@ -203,3 +203,9 @@
 - Updated: index.md (Entities +1, Total pages: 87)
 - 补充：与本项目 Polars 用法的选型结论（不迁移；唯一关注点=Iceberg 写 OSS Tables；再评估触发条件两条）
 - Updated: frontmatter updated → 2026-09-14（同日）
+
+## [2026-09-14] update | daft（查证修正）
+- 查证官方文档：Daft Iceberg 集成基于 PyIceberg（非 Rust-native），OSS Tables 写入问题在 Daft 上原样存在
+- 修正选型结论：逐文件核实 Polars 现有角色（asw ETL+Delta merge / query_oss markdown / sync ETL），Daft 均无替代价值
+- 关键事实：Daft Iceberg 读尚不应用 V2 equality deletes（roadmap），对 RW merge-on-read 表同样读出重复行
+- 前一条"可绕 OSS Tables 写入问题"的结论作废；新增真实进场时机三条（equality deletes 落地/单机放不下/多模态管道）
