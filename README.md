@@ -45,6 +45,7 @@ wiki/
 | 技能直调 | [[skill-direct-invocation]] — 确定性操作绕过 LLM |
 | KV Cache | [[kv-cache]] — LLM 推理加速的核心机制 |
 | 模型基础 | [[activation-loss-functions]] — 激活函数引入非线性，损失函数定义优化目标 · [[model-parameters-quantization]] · [[traditional-vs-moe-models]] |
+| 语义表征 | [[embedding-semantic-space]] — Embedding 把文本映射到距离有意义的语义空间 |
 
 ### 🗄️ 存储系统
 
@@ -60,7 +61,8 @@ wiki/
 | 主题 | 核心页面 |
 |------|---------|
 | Iceberg | [[iceberg]] · [[lakehouse]] · [[iceberg-cow-problem]] · [[iceberg-small-file-problem]] |
-| 计算引擎 | [[duckdb]] · [[polars]] · [[polars-iceberg-oss-tables]] |
+| 计算引擎 | [[duckdb]] · [[polars]] · [[daft]] — 分布式多模态 DataFrame · [[polars-iceberg-oss-tables]] |
+| 表格式语义 | [[why-open-table-format]] — 为什么需要 · [[table-format-four-capabilities]] — 四大核心能力 |
 | 数据湖 | [[delta-lake]] · entities: [[oss]] · [[dashscope]] |
 
 ### 🔍 搜索技术
