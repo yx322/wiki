@@ -209,3 +209,9 @@
 - 修正选型结论：逐文件核实 Polars 现有角色（asw ETL+Delta merge / query_oss markdown / sync ETL），Daft 均无替代价值
 - 关键事实：Daft Iceberg 读尚不应用 V2 equality deletes（roadmap），对 RW merge-on-read 表同样读出重复行
 - 前一条"可绕 OSS Tables 写入问题"的结论作废；新增真实进场时机三条（equality deletes 落地/单机放不下/多模态管道）
+
+## [2026-09-14] update | daft（页面重整）
+- 结构重排：Iceberg 集成单列一节（基于 PyIceberg；读=分布式 IO+下推，写=append/overwrite 无 upsert；不支持 V2 equality deletes）
+- 合并"生态与 I/O"与"查证修正"两节去重；外部白皮书 md 评估结论融入（Arrow 零拷贝、无 JVM、daft-ext 存疑未收录）
+- 补充：RisingWave CDC 流式 upsert 不可被 Daft 替代（批处理引擎无变更捕获）
+- [[iceberg-reader|IcebergDedupReader]] 链接指向 search-todo 手写去重读取器

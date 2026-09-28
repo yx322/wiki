@@ -10,7 +10,7 @@ confidence: high
 
 # Daft 分布式多模态 DataFrame 库
 
-开源分布式 DataFrame 库（[getdaft.io](https://www.getdaft.io)），Rust 引擎 + Python API，主打**分布式执行（Ray）+ 多模态数据（图像/张量/嵌入向量）**。PyPI 包名 `getdaft`，导入 `import daft`。
+开源分布式 DataFrame 库（[getdaft.io](https://www.getdaft.io)），Rust 引擎 + Python API（PyO3 绑定），主打**分布式执行（Ray）+ 多模态数据（图像/张量/嵌入向量）**。PyPI 包名 `getdaft`，导入 `import daft`。官方仅提供 Python API，无独立 Rust crate。
 
 ## 与 Polars 的定位分野
 
@@ -24,7 +24,7 @@ confidence: high
 | 纯表格性能 | 第一梯队 | 不错但通常略逊 |
 | I/O 密集任务 | 一般 | 强（`download()` 自动并行/重试/限流） |
 | 成熟度 | 非常成熟 | 较新，快速迭代中 |
-| GPU | cudf.polars 加速 | GPU UDF |
+| GPU | cudf.polars 加速 | GPU UDF（自动 batching/设备调度） |
 
 **一句话**：Daft ≈「Polars + 分布式 + 多模态」，代价是纯表格场景生态与性能细节不如 Polars。
 
@@ -39,11 +39,16 @@ confidence: high
 3. **GPU UDF 批处理托管**：`@daft.udf(batch_size=64)` 包装 CLIP 等模型，批处理/设备搬运/GPU 节点调度引擎管理
 4. **直通 PyTorch**：`df.to_torch()` / `iter_torch_batches(batch_size=256)`，图像保持 numpy/torch 兼容格式，免写 Dataset 类
 
-## 生态与 I/O
+## Iceberg 集成：基于 PyIceberg（2026-09 查证官方文档）
 
-Parquet/CSV/JSON/Delta Lake/**Apache Iceberg**/Lance 读写；本地路径与 S3/GCS/Azure/OSS 等云存储统一 URL 语法。
+**关键事实**：Daft 的 Iceberg 集成**构建在 PyIceberg 之上**——`load_catalog()` 即 PyIceberg 函数，`df.write_iceberg(table)` 接收 PyIceberg Table 对象。官方表述 "natively integrated with PyIceberg"。
 
-**与 Iceberg 的关系对项目有直接参考价值**：Daft 原生支持 Iceberg catalog 读表，写路径比 Polars 成熟（Polars `write_iceberg()` 在本项目已确认与阿里云 OSS Tables 协议不兼容，见 [[polars-iceberg-oss-tables]]）。湖仓读侧用 Daft 替代 Polars 是低成本选项；写侧如需绕开 OSS Tables 协议问题，Daft 的 Iceberg 集成值得一试。
+- **读**：分布式 I/O + 谓词下推（分区裁剪、min/max 文件剪枝）+ branch/tag/snapshot 读取——这部分是 Daft 引擎层加的价值
+- **写**：append / 全表 overwrite / 静态分区 overwrite（`overwrite_filter`，带写入校验）；**不支持 upsert/copy-on-write 更新**
+- **不支持 V2 equality deletes 的应用**（官方 FAQ：on the roadmap）——读 merge-on-read 表会把更新过的行读成多份
+- **catalog 能力 = PyIceberg 的 catalog 能力**：PyIceberg 连不上的 catalog（如阿里云 OSS Tables，见 [[polars-iceberg-oss-tables]]），Daft 同样连不上
+
+Delta Lake 同样支持读写（URI 直连 S3/GCS/Azure），但同样无 merge/upsert 语义。
 
 ## 选型
 
@@ -55,32 +60,37 @@ Parquet/CSV/JSON/Delta Lake/**Apache Iceberg**/Lance 读写；本地路径与 S3
 | 数据量大到要集群（不想用 PySpark/JVM） | **Daft** |
 | ML 数据准备（下载→预处理→喂 PyTorch） | **Daft** |
 
-## 与本项目 Polars 用法的关系（选型结论，2026-09-14 查证官方文档后修正）
+## 与本项目 Polars 用法的关系（选型结论）
 
 当前湖仓链路（[[task-data-pipeline]]）中 Polars 承担查湖客户端 + 轻量转换：纯表格数据、单机量级、单进程部署——Polars 全面占优，**不迁移**。
 
-**查证修正**：Daft 的 Iceberg 集成**基于 PyIceberg**（`load_catalog` 即 PyIceberg 函数，`write_iceberg` 接收 PyIceberg Table），并非独立 Rust-native 实现——因此 OSS Tables 协议不兼容问题（[[polars-iceberg-oss-tables]]）在 Daft 上原样存在，"绕开写入问题"的预期不成立。
+Polars 现有角色逐文件核实：
 
-| Polars 现有角色（逐文件核实） | Daft 能替？ | 结论 |
+| Polars 现有角色 | Daft 能替？ | 结论 |
 |---|---|---|
 | asw sync.py：ETL + 写 Delta Lake（`DeltaTable.merge` upsert） | ⚠️ Daft 读 Delta 但无 merge 等价，只 append/overwrite | 替了要重写 upsert，不值 |
 | query_oss.py：DuckDB 结果 `.pl()` → markdown 给 LLM | ✅ 随便替 | 无收益，纯换口味 |
 | search-todo sync.py：批量同步 ETL（cast/空值填充） | ✅ API 近同构 | 收益≈0 |
 | 湖读主链路 | ❌ 实际主力是 pyiceberg + DuckDB，Polars 只在两端 | Daft 无位置 |
 
-**关键查证**：Daft 的 Iceberg 读路径**尚不应用 V2 equality deletes**（官方 FAQ：on the roadmap）——而 RW iceberg upsert sink 恰以 merge-on-read 写入 equality delete 文件，直接读出重复行。项目手写的 [[iceberg-reader|IcebergDedupReader]]（按主键取最大 seq 去重）解决的正是这个问题，Daft 当前同样需要这层处理，故读侧也无优势。
+两个关键查证：
+
+1. **OSS Tables 写入问题在 Daft 上原样存在**——其 catalog 层就是 PyIceberg，协议不兼容（[[polars-iceberg-oss-tables]]）无法靠换 Daft 绕开
+2. **读 RW merge-on-read 表同样读出重复行**——Daft 不应用 equality deletes，而 RW iceberg upsert sink 恰以 merge-on-read 写入；项目手写的 [[iceberg-reader|IcebergDedupReader]]（按主键取最大 seq 去重）解决的正是这个问题，Daft 当前同样需要这层处理。湖读主链路实际主力是 pyiceberg + DuckDB，Polars 只在两端，Daft 插不进
 
 **Daft 的真实进场时机**（未来）：
-1. 其读路径支持 V2 equality deletes 后 → `daft.read_iceberg()` 可替代手写 dedup reader
+
+1. 读路径支持 V2 equality deletes 后 → `daft.read_iceberg()` 可替代手写 dedup reader
 2. 数据量大到单机放不下 → Ray 分布式
 3. 出现图像/嵌入管道 → 多模态算子
 
-三条目前均不满足，定位保持"地图点位，不入栈"。
+三条目前均不满足，定位保持"地图点位，不入栈"。另：RisingWave 的 CDC 流式 upsert 不可被 Daft 替代——Daft 是批处理引擎，无变更捕获能力，upsert 语义也不支持。
 
 ## 参见
 
 - [[polars]] — 单机高性能对照物
-- [[iceberg]] — Daft 原生支持的表格式
+- [[iceberg]] — Daft（经 PyIceberg）支持的表格式
 - [[polars-iceberg-oss-tables]] — Polars 写 OSS Tables 的协议兼容性问题（Daft 同受影响）
+- [[task-data-pipeline]] — 项目湖仓链路（RW CDC 不可替代的语境）
 - [[lakehouse]] — 湖仓一体架构
 - [[hnsw-index]] — Embedding 列的下游消费（向量检索）
