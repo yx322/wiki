@@ -201,3 +201,5 @@
 - Source: 对话内容（无 raw 文件，sources 为空）
 - Created: entities/daft.md (Rust 引擎 + Ray 分布式；多模态一等公民 Image/Tensor/Embedding；与 Polars 定位分野；Iceberg 集成可绕 OSS Tables 写入问题)
 - Updated: index.md (Entities +1, Total pages: 87)
+- 补充：与本项目 Polars 用法的选型结论（不迁移；唯一关注点=Iceberg 写 OSS Tables；再评估触发条件两条）
+- Updated: frontmatter updated → 2026-09-14（同日）

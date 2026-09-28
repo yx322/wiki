@@ -55,6 +55,22 @@ Parquet/CSV/JSON/Delta Lake/**Apache Iceberg**/Lance 读写；本地路径与 S3
 | 数据量大到要集群（不想用 PySpark/JVM） | **Daft** |
 | ML 数据准备（下载→预处理→喂 PyTorch） | **Daft** |
 
+## 与本项目 Polars 用法的关系（选型结论）
+
+当前湖仓链路（[[task-data-pipeline]]）中 Polars 承担查湖客户端 + 轻量转换：纯表格数据、单机量级、单进程部署——Polars 全面占优，**不迁移**。
+
+| 维度 | 项目场景 | 谁占优 |
+|------|---------|--------|
+| 执行模式 | 单进程、数据单机放得下 | Polars（Ray 分布式用不上） |
+| 表格计算 | SQL 生成 + DuckDB + Polars 转换 | Polars |
+| 数据类型 | 纯结构化行列，无图像/张量 | 打平（多模态用不上） |
+| **Iceberg 写** | Polars `write_iceberg()` 已确认写不了 OSS Tables | **Daft 值得试的唯一理由** |
+| 生态/认知 | 现有代码全是 Polars + pyiceberg，坑已趟平 | Polars |
+
+多模态优势对本项目价值接近零（OA 待办/工单/报价无图像管道）。唯一与痛点相关的是 **Iceberg 写入**：Daft 走自己的 Rust-native Iceberg 集成（非 PyIceberg 封装），若其 REST catalog 实现比 PyIceberg 更宽容，可绕开 OSS Tables 协议问题摆脱 Spark/手动 manifest 兜底——定位是"30 分钟试验项"，不是迁移对象（为单一写入点引入第二个 DataFrame 库违背单进程少依赖原则）。
+
+**再评估触发条件**：① 数据量大到单机放不下；② OSS Tables 写入需要摆脱现有 Spark/sink 兜底方案时。
+
 ## 参见
 
 - [[polars]] — 单机高性能对照物
