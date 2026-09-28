@@ -196,3 +196,8 @@
 - Source: 对话内容（无 raw 文件，sources 为空）
 - Created: concepts/embedding-semantic-space.md (原始空间距离无意义；embedding=度量重排非单纯压缩；同模型才可比；先embedding再算距离是必然流程；与激活函数同属表征重排思想)
 - Updated: index.md (Concepts +1, Total pages: 86)
+
+## [2026-09-14] create | Daft 分布式多模态 DataFrame（对话整理）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: entities/daft.md (Rust 引擎 + Ray 分布式；多模态一等公民 Image/Tensor/Embedding；与 Polars 定位分野；Iceberg 集成可绕 OSS Tables 写入问题)
+- Updated: index.md (Entities +1, Total pages: 87)
