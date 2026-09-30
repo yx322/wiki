@@ -215,3 +215,8 @@
 - 合并"生态与 I/O"与"查证修正"两节去重；外部白皮书 md 评估结论融入（Arrow 零拷贝、无 JVM、daft-ext 存疑未收录）
 - 补充：RisingWave CDC 流式 upsert 不可被 Daft 替代（批处理引擎无变更捕获）
 - [[iceberg-reader|IcebergDedupReader]] 链接指向 search-todo 手写去重读取器
+
+## [2026-09-29] create | Agent 循环（对话整理，原话保留）
+- Source: 对话内容（用户要求一字不改写入）
+- Created: concepts/agent-loop.md (while+工具回填本质；messages 不变量；五个工程问题——终止条件/流式拼装/错误喂回/记忆终局写/注入点前置；框架填空题对比 LangGraph/skillforge/Claude Code；与 prefix-checkpoint/Fluxen patch 的"别重发没变的部分"连线)
+- Updated: index.md (Concepts +1, Total pages: 88)

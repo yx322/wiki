@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-14 | Total pages: 87
+> Last updated: 2026-09-29 | Total pages: 88
 
 ## Entities
 
@@ -93,6 +93,7 @@
 - [[why-open-table-format]] — 为什么需要开放表格式：对象存储只有文件没有表，元数据层补回事务/一致性/演化/版本语义
 - [[table-format-four-capabilities]] — 开放表格式四大核心能力详解：事务/一致性/Schema 管理/版本控制，一个闭环
 - [[embedding-semantic-space]] — Embedding 把文本映射到距离有意义的语义空间；度量重排，同一模型才可比
+- [[agent-loop]] — Agent 循环：while + 工具回填，模型每轮决策一步；终止/流式拼装/错误回填/记忆终局写
 
 ## Comparisons
 
