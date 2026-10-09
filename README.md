@@ -44,6 +44,8 @@ wiki/
 | 涌现式技能 | [[emergent-skill]] — 技能从使用中长出来，图可达性替代 ACL |
 | 技能直调 | [[skill-direct-invocation]] — 确定性操作绕过 LLM |
 | KV Cache | [[kv-cache]] — LLM 推理加速的核心机制 |
+| 推理优化三部曲 | [[kv-cache-prompt-caching-prefill]] — KV Cache/Prompt Caching/Prefill：不变的东西只算一次 |
+| 上下文压缩对比 | [[auto-compact-vs-tail-prompt-compression]] — Auto-Compact vs 尾提示词：一次性结清 vs 分期付款 |
 | 模型基础 | [[activation-loss-functions]] — 激活函数引入非线性，损失函数定义优化目标 · [[model-parameters-quantization]] · [[traditional-vs-moe-models]] |
 | 语义表征 | [[embedding-semantic-space]] — Embedding 把文本映射到距离有意义的语义空间 |
 
