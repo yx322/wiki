@@ -225,3 +225,8 @@
 - Source: 对话内容（三轮递进：KV Cache 单次生成内复用 → Prompt Caching 跨请求复用 → Prefill 两阶段负载）
 - Created: concepts/kv-cache-prompt-caching-prefill.md (KV Cache 原理/显存账/优化技术；Prompt Caching 各平台策略表/逐字节匹配黄金法则/自托管 RadixAttention/缓存雪崩故事；Prefill vs Decode compute-bound vs memory-bound/算术强度/chunked prefill/PD 分离)
 - Updated: index.md (Concepts +1, Total pages: 89)
+
+## [2026-09-30] create | Auto-Compact vs 尾提示词压缩对比（对话整理）
+- Source: 对话内容（Claude Code Auto-Compact 拆解 + 与 skillforge Prefix Checkpoint 对比）
+- Created: comparisons/auto-compact-vs-tail-prompt-compression.md (type: comparison。Auto-Compact 五步流程+九段式 meta-prompt+失效模式；三大差异——推倒重来vs滚动换底/专门摘要调用vs搭便车/九段式vs一句话（有回查通道才敢丢细节）；选型对照；可借鉴点——廉价清理工具输出、回查通道)
+- Updated: index.md (Comparisons +1, Total pages: 90)

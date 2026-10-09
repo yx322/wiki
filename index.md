@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-09-30 | Total pages: 89
+> Last updated: 2026-09-30 | Total pages: 90
 
 ## Entities
 
@@ -102,5 +102,6 @@
 - [[embedded-kv-vs-redis]] — 嵌入式 KV vs Redis：TCO 1/8、延迟 1/16、运维 1/8
 - [[skill-vs-framework]] — Skill 模式 vs 框架路线：编排智能放模型上下文 vs 放框架代码，光谱正在右移
 - [[sync-on-query-vs-cdc]] — asw（Sync-on-Query 客户端写入 + OSS Tables）vs search-todo（CDC 流式 + Lakekeeper）：复杂度藏在代码里 vs 摆在 docker-compose 里
+- [[auto-compact-vs-tail-prompt-compression]] — Claude Code Auto-Compact vs skillforge 尾提示词压缩：一次性结清 vs 分期付款，两种上下文压缩哲学
 
 ## Queries
