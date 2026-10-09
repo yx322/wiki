@@ -220,3 +220,8 @@
 - Source: 对话内容（用户要求一字不改写入）
 - Created: concepts/agent-loop.md (while+工具回填本质；messages 不变量；五个工程问题——终止条件/流式拼装/错误喂回/记忆终局写/注入点前置；框架填空题对比 LangGraph/skillforge/Claude Code；与 prefix-checkpoint/Fluxen patch 的"别重发没变的部分"连线)
 - Updated: index.md (Concepts +1, Total pages: 88)
+
+## [2026-09-30] create | KV Cache 与 Prompt Caching 与 Prefill（对话整理）
+- Source: 对话内容（三轮递进：KV Cache 单次生成内复用 → Prompt Caching 跨请求复用 → Prefill 两阶段负载）
+- Created: concepts/kv-cache-prompt-caching-prefill.md (KV Cache 原理/显存账/优化技术；Prompt Caching 各平台策略表/逐字节匹配黄金法则/自托管 RadixAttention/缓存雪崩故事；Prefill vs Decode compute-bound vs memory-bound/算术强度/chunked prefill/PD 分离)
+- Updated: index.md (Concepts +1, Total pages: 89)
