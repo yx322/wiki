@@ -230,3 +230,8 @@
 - Source: 对话内容（Claude Code Auto-Compact 拆解 + 与 skillforge Prefix Checkpoint 对比）
 - Created: comparisons/auto-compact-vs-tail-prompt-compression.md (type: comparison。Auto-Compact 五步流程+九段式 meta-prompt+失效模式；三大差异——推倒重来vs滚动换底/专门摘要调用vs搭便车/九段式vs一句话（有回查通道才敢丢细节）；选型对照；可借鉴点——廉价清理工具输出、回查通道)
 - Updated: index.md (Comparisons +1, Total pages: 90)
+
+## [2026-10-09] create | 窄 CoT 与薄循环工具试错（对话整理）
+- Source: 对话内容（CoT 有效场景/缺点局限/窄 CoT+薄循环的分工）
+- Created: concepts/narrow-cot-thin-loop.md (窄=约束在工具链拆解+边界检查；工具试错 vs 脑内推演对比表；两者拼合的完整形态（微型导航散布循环中）；CoT 四个机制层缺陷+工程代价；有效/无效判据——答案在参数还是环境)
+- Updated: index.md (Concepts +1, Total pages: 91)
