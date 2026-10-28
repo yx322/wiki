@@ -84,7 +84,13 @@ wiki/
 | 语言设计 | [[modern-language-design]] · [[query-language-design]] · [[kdl-config-formats]] |
 | 设计模式 | [[design-patterns]] · [[engineering-mindset]] |
 
-> 完整索引见 **[index.md](index.md)**，当前共 **91 页**。
+### 🦀 Rust 学习
+
+| 主题 | 核心页面 |
+|------|---------|
+| 并发入门 | [[rust-arc-mutex-threading]] — Arc+Mutex+thread::spawn 逐行拆解：所有权共享、互斥锁、引用计数、Result 处理 |
+
+> 完整索引见 **[index.md](index.md)**，当前共 **92 页**。
 
 ## Wiki vs RAG
 

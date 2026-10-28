@@ -80,6 +80,9 @@ sha256: <hex digest of body content>
 - consensus — 分布式共识
 - redis — Redis 替代方案批判
 
+### 编程语言
+- rust — Rust 语言（所有权、并发、生态库）
+
 ### 元标签
 - comparison — 方案对比
 - migration — 迁移指南

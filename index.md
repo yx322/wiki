@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-10-09 | Total pages: 91
+> Last updated: 2026-10-28 | Total pages: 92
 
 ## Entities
 
@@ -96,6 +96,7 @@
 - [[agent-loop]] — Agent 循环：while + 工具回填，模型每轮决策一步；终止/流式拼装/错误回填/记忆终局写
 - [[narrow-cot-thin-loop]] — 窄 CoT + 薄循环工具试错：脑内只做导航，方向盘和路交给工具；CoT 有效/无效判据
 - [[kv-cache-prompt-caching-prefill]] — KV Cache/Prompt Caching/Prefill 三部曲：不变的东西只算一次；prefill compute-bound vs decode memory-bound
+- [[rust-arc-mutex-threading]] — Rust 多线程入门：Arc+Mutex+thread::spawn 逐行拆解，所有权共享 + 互斥锁 + Result 处理
 
 ## Comparisons
 

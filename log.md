@@ -235,3 +235,10 @@
 - Source: 对话内容（CoT 有效场景/缺点局限/窄 CoT+薄循环的分工）
 - Created: concepts/narrow-cot-thin-loop.md (窄=约束在工具链拆解+边界检查；工具试错 vs 脑内推演对比表；两者拼合的完整形态（微型导航散布循环中）；CoT 四个机制层缺陷+工程代价；有效/无效判据——答案在参数还是环境)
 - Updated: index.md (Concepts +1, Total pages: 91)
+
+## [2026-10-28] create | Rust 多线程入门：Arc + Mutex + thread::spawn（对话整理）
+- Source: 对话内容（代码逐行讲解 + Arc::clone 深度剖析 + for 循环逐步执行 + unwrap/Result 机制四轮递进）
+- Created: concepts/rust-arc-mutex-threading.md (Arc/Mutex 为何成对出现；clone 复制指针而非数据+原子引用计数；变量遮蔽与 move 的必要性；loop 三步流程+乱序打印原理；lock/MutexGuard/锁中毒；unwrap 与 Result 家族；::与. 语法速记；常见坑表)
+- Updated: SCHEMA.md (新增"编程语言"标签组 + rust 标签)
+- Updated: README.md (知识版图新增"🦀 Rust 学习"标题, Total pages: 92)
+- Updated: index.md (Concepts +1, Total pages: 92)
