@@ -250,3 +250,11 @@
 - 修复聊天损坏的加粗标记两处（迈进/「无限心智」），措辞未动
 - Updated: index.md (Concepts +1, Total pages: 93)
 - Updated: README.md（徽章 91→93 补齐上次漏改、知识版图新增「演进方向」行、页脚日期 2026-11-17）
+
+## [2026-11-17] create | 无限心智：从"蒸汽、钢铁"到 AI 时代不被抛弃（对话整理，原话保留）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/infinite-mind.md（Ivan Zhao《Steam, Steel, and Infinite Minds》精读+展开：奇迹材料坐标系/无限心智三特性；大模型演进方向=无限心智落地；普通人四条破局——导演思维/外挂团队/真实世界连接/好奇心）
+- 出处核实：Notion 官方博客 notion.com/blog/steam-steel-and-infinite-minds-ai（2025-12-22，Co-founder & CEO Ivan Zhao）；"组织的钢铁""水车阶段""佛罗伦萨→超级都市"等隐喻均见原文
+- Inline links：思维链→[[narrow-cot-thin-loop]]、ReAct→[[agent-loop]]、多 Agent 编排→[[chatbot-to-agentic-ai]]；文末新增「参见」节
+- Updated: index.md (Concepts +1, Total pages: 94)
+- Updated: README.md（徽章 94、演进方向行补 [[infinite-mind]]、页脚 94 页）

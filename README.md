@@ -2,7 +2,7 @@
 
 > 一次编译、持续维护的个人知识库。基于 [Karpathy 的 LLM Wiki 模式](https://karpathy.bearblog.dev/keep-a-wiki/) —— 不做检索式 RAG，而是把知识**主动整理成互相链接的 Markdown 页面**，让 LLM（和我自己）能读懂、能溯源、能持续生长。
 
-[![Pages](https://img.shields.io/badge/pages-93-blue)](index.md) [![Mode](https://img.shields.io/badge/mode-wiki%20%2B%20raw-orange)]() [![Lang](https://img.shields.io/badge/language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-red)]()
+[![Pages](https://img.shields.io/badge/pages-94-blue)](index.md) [![Mode](https://img.shields.io/badge/mode-wiki%20%2B%20raw-orange)]() [![Lang](https://img.shields.io/badge/language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-red)]()
 
 ---
 
@@ -48,7 +48,7 @@ wiki/
 | 上下文压缩对比 | [[auto-compact-vs-tail-prompt-compression]] — Auto-Compact vs 尾提示词：一次性结清 vs 分期付款 |
 | 模型基础 | [[activation-loss-functions]] — 激活函数引入非线性，损失函数定义优化目标 · [[model-parameters-quantization]] · [[traditional-vs-moe-models]] |
 | 语义表征 | [[embedding-semantic-space]] — Embedding 把文本映射到距离有意义的语义空间 |
-| 演进方向 | [[chatbot-to-agentic-ai]] — 从 Chatbot 到 Agentic AI：模型慢思考 · 多 Agent 编排 · 落地阵痛 |
+| 演进方向 | [[chatbot-to-agentic-ai]] — 从 Chatbot 到 Agentic AI：模型慢思考 · 多 Agent 编排 · 落地阵痛 · [[infinite-mind]] — 无限心智：Ivan Zhao 认知生产力与普通人破局 |
 
 ### 🗄️ 存储系统
 
@@ -91,7 +91,7 @@ wiki/
 |------|---------|
 | 并发入门 | [[rust-arc-mutex-threading]] — Arc+Mutex+thread::spawn 逐行拆解：所有权共享、互斥锁、引用计数、Result 处理 |
 
-> 完整索引见 **[index.md](index.md)**，当前共 **93 页**。
+> 完整索引见 **[index.md](index.md)**，当前共 **94 页**。
 
 ## Wiki vs RAG
 
@@ -127,4 +127,4 @@ git clone https://github.com/yx322/wiki.git
 
 ---
 
-*最后更新：2026-11-17 · 共 93 页 · 持续生长中* 🌱
+*最后更新：2026-11-17 · 共 94 页 · 持续生长中* 🌱
