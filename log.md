@@ -242,3 +242,11 @@
 - Updated: SCHEMA.md (新增"编程语言"标签组 + rust 标签)
 - Updated: README.md (知识版图新增"🦀 Rust 学习"标题, Total pages: 92)
 - Updated: index.md (Concepts +1, Total pages: 92)
+
+## [2026-11-17] create | 从 Chatbot 到 Agentic AI：大模型演进方向（对话整理，原话保留）
+- Source: 对话内容（无 raw 文件，sources 为空）
+- Created: concepts/chatbot-to-agentic-ai.md（三层演进：基础模型从直觉反应到深度思考 CoT/ToT/ReAct；工程生态从单一对话框到多 Agent 编排；行业阵痛——上下文鸿沟、Demo→鲁棒性/误差累积）
+- Inline links：Chain-of-Thought→[[narrow-cot-thin-loop]]、ReAct→[[agent-loop]]；文末新增「参见」节
+- 修复聊天损坏的加粗标记两处（迈进/「无限心智」），措辞未动
+- Updated: index.md (Concepts +1, Total pages: 93)
+- Updated: README.md（徽章 91→93 补齐上次漏改、知识版图新增「演进方向」行、页脚日期 2026-11-17）

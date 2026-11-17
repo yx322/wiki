@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-10-28 | Total pages: 92
+> Last updated: 2026-11-17 | Total pages: 93
 
 ## Entities
 
@@ -97,6 +97,7 @@
 - [[narrow-cot-thin-loop]] — 窄 CoT + 薄循环工具试错：脑内只做导航，方向盘和路交给工具；CoT 有效/无效判据
 - [[kv-cache-prompt-caching-prefill]] — KV Cache/Prompt Caching/Prefill 三部曲：不变的东西只算一次；prefill compute-bound vs decode memory-bound
 - [[rust-arc-mutex-threading]] — Rust 多线程入门：Arc+Mutex+thread::spawn 逐行拆解，所有权共享 + 互斥锁 + Result 处理
+- [[chatbot-to-agentic-ai]] — 从 Chatbot 到 Agentic AI：三层演进——模型慢思考（CoT/ToT/ReAct）、多 Agent 编排（工具调用/多智能体）、落地阵痛（上下文鸿沟/Demo→鲁棒性）
 
 ## Comparisons
 
